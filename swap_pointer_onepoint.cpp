@@ -1,4 +1,9 @@
-#include <stdio.h>
+/*
+ * Module: Memory Swap Engine
+ * Purpose: Swapping two integer variables using pointer dereferencing (*t).
+ * Note: Designed to minimize direct array copying by manipulating memory addresses.
+ */
+ #include <stdio.h>
 
 int main()
 {
