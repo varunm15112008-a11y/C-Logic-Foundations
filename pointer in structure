@@ -1,0 +1,39 @@
+#include <stdio.h>
+struct marks
+{
+	int math;
+	int physics;
+	int chemistry;
+	int ip;
+};
+
+int main()
+{
+	int num,i;
+	printf("enter number of student: ");
+	scanf("%d", &num);
+	struct marks s[num];
+	struct marks *ptr;
+	struct marks *p2;
+	p2 = s;
+	for (i=0;i<num;i++)
+	  {
+	  	printf("\n");
+	  	printf("enter marks of student %d",i+1);
+	  	printf("\nenter math mark: ");
+	  	scanf("%d", &(p2->math));
+	  	printf("enter physics mark: ");
+	  	scanf("%d", &(p2->physics));
+	  	printf("enter chemistry mark: ");
+	  	scanf("%d", &(p2->chemistry));
+	  	printf("enter ip mark: ");
+	  	scanf(" %d", &(p2->ip));
+	  }
+	
+	for (i=0;i<num;i++)
+	  {
+	  	int totalmarks = 0;
+	  	totalmarks = (p2->math) + (p2->physics) + (p2->chemistry) + (p2->ip);
+	  	printf("Total marks of student %d is %d\n",i+1,totalmarks);
+	  }
+}
