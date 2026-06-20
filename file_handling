@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int num;
+    FILE *fptr;
+    fptr = fopen("C:\\Users\\freedom\\Desktop\\c program\\FILE HANDLING\\New Text Document.txt", "a");
+
+    if (fptr == NULL) 
+    {
+        printf("Error! opening file.");
+        exit(1);
+    }
+    
+    printf("Enter num: ");
+    scanf("%d", &num);
+    
+    
+    fprintf(fptr, "%d\n", num); 
+    
+    fclose(fptr);
+    printf("Data successfully written to the file.\n");
+    
+    return 0;
+}
