@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    FILE *fptr;
+    char buffer[100];
+
+    // 1. Open the file in write mode ("w")
+    fptr = fopen("example.txt", "w");
+
+    // Check if the file pointer is NULL (Error Handling)
+    if (fptr == NULL) {
+        printf("Error opening file for writing!\n");
+        return 1;
+    }
+
+    // Write a string to the file
+    fprintf(fptr, "Hello! This is a file handling example in C.\n");
+    printf("Data successfully written to example.txt\n");
+
+    // Close the file after writing
+    fclose(fptr);
+
+    // 2. Open the file in read mode ("r")
+    fptr = fopen("example.txt", "r");
+
+    // Check if the file pointer is NULL
+    if (fptr == NULL) {
+        printf("Error opening file for reading!\n");
+        return 1;
+    }
+
+    // Read the string from the file and store it in the buffer
+    printf("\nReading from example.txt:\n");
+    while (fgets(buffer, sizeof(buffer), fptr) != NULL) {
+        printf("%s", buffer);
+    }
+
+    // Close the file after reading
+    fclose(fptr);
+
+    return 0;
+}
