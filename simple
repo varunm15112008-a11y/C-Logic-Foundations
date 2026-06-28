@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+    int number;
+    long long factorial = 1;
+
+    // 1. Get interactive user input using stream insertion/extraction
+    std::cout << "Enter a positive integer (1-20): ";
+    std::cin >> number;
+
+    // 2. Conditional logic (If-Else) for validation
+    if (number < 0) {
+        std::cout << "Error: Negative numbers are not allowed.\n";
+    } else if (number > 20) {
+        std::cout << "Error: Number too large! Result will overflow standard memory.\n";
+    } else {
+        // 3. Loop structure to calculate the result
+        for (int i = 1; i <= number; ++i) {
+            factorial *= i; 
+        }
+
+        // 4. Output the final processed result
+        std::cout << "The factorial of " << number << " is: " << factorial << "\n";
+    }
+
+    return 0;
+}
