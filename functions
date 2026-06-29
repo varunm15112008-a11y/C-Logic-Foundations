@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int sum(int a,int b)
+{   
+    int out;
+	out = a + b;
+	cout<<"sum: "<<out;
+	
+}
+
+int main()
+{
+	int num,data;
+	cout<<"enter the value of num: ";
+	cin>>num;
+	cout<<"enter the value of data: ";
+	cin>>data;			
+	sum(num,data);
+	//cout<<"the sum of two number is "<<result<<endl;
+}
+
