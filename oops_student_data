@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class student 
+  {
+  	public:
+  		int reg_on;
+  		string name;
+  		int age;
+  		
+  	void display()
+  	  {
+  	  	cout<<"reg_on:"<<reg_on<<endl;
+  	  	cout<<"name:"<<name<<endl;
+  	  	cout<<"age:"<<age<<endl;
+		}
+  };
+  
+int main()
+{
+	int i=0;
+	cout<<"enter number of student: ";
+	cin>>i;
+	student s[i];
+	
+	int j;
+	for (j=0;j<i;j++)
+	{
+	cout<<"information of student "<<j+1<<endl;
+	cout<<"enter the reg_no: ";
+	cin>>s[j].reg_on;
+	cout<<"enter the name of the student: ";
+	cin>>s[j].name;
+	cout<<"enter the age of the student: ";
+	cin>>s[j].age;
+   }
+   for (j=0;j<i;j++)
+    {
+    	s[j].display();
+	}
+}
