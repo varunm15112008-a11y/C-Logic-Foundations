@@ -1,0 +1,6 @@
+#include <stdio.h>
+void main()
+{
+    printf("Y\nO\nU\nR\nN\nA\nM\nE");
+
+}
