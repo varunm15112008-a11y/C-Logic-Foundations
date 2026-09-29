@@ -2,6 +2,7 @@
 
 int main() {
     int number;
+
     long long factorial = 1;
 
     // 1. Get interactive user input using stream insertion/extraction
